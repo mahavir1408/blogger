@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <title>
+        <data:blog.pageTitle/>
+      </title>
+      <b:else/>
+      <title>
+        <data:blog.pageName/>
+      </title>
+    </b:if>
+    <b:include data='blog' name='all-head-content'/>
+    <b:skin>
+    <![CDATA[
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css);
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css);
+    @import url(https://4a599022285149371da3be8db01bc3e2c6e7edd4.googledrive.com/host/0BzNuNsgwJPZ5c0poTk1RWkhYWHc);
+    ]]>
+    </b:skin>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href='https://79ce7bbd71766b2fae4ab744260dde3d6a47168c.googledrive.com/host/0BzNuNsgwJPZ5RnMxWXRuVmJvRVU' rel='shortcut icon'/>
+    <link href='https://79ce7bbd71766b2fae4ab744260dde3d6a47168c.googledrive.com/host/0BzNuNsgwJPZ5RnMxWXRuVmJvRVU' rel='shortcut icon' type='image/vnd.microsoft.icon'/>    
+  </head>
+  <body>
+
+  <b:section class='Blog Header' id='header' maxwidgets='1' showaddelement='no'>
+    <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
+      <b:includable id='main'>
+        <b:include name="BlogElements" data='blog'/><br/>
+        <b:include name='Postings'/>
+      </b:includable>
+  
+      <b:includable id='BlogElements' var='b'>
+        <data:b.title/>
+      </b:includable>
+ 
+      <b:includable id='Postings'>
+        <b:loop values='data:posts' var='p'>
+          <b:include name='post' data='p'/>
+        </b:loop>
+      </b:includable>
+ 
+      <b:includable id='post' var='p'>
+        <data:p.title/><br/>
+        <data:p.dateHeader/><br/>
+        <data:p.id/><br/>
+        <data:p.body/><br/>
+        <data:p.author/><br/>
+        <data:p.timestamp/><br/>
+      </b:includable>
+ 
+      <b:includable id='nextprev'/>
+      <b:includable id='backlinks'/>
+      <b:includable id='backlinkDeleteIcon'/>
+      <b:includable id='status-message'/>
+      <b:includable id='comment-form'/>
+      <b:includable id='postQuickEdit'/>
+      <b:includable id='commentDeleteIcon'/>
+      <b:includable id='feedLinks'/>
+      <b:includable id='feedLinksBody'/>
+      <b:includable id='comments'/>
+    </b:widget>
+  </b:section>
+  <b:section class='whatever' id='whatever'/>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'/>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'/>
+  </body>
+</html>
