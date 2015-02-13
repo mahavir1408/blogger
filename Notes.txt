@@ -1,0 +1,8 @@
+http://beautifulbeta.wikidot.com/post-includable
+http://beautifulbeta.wikidot.com/includable
+http://code.blogger.com/?view=classic
+http://sandbox-mahavir-munot.blogspot.in/
+
+https://support.google.com/blogger/answer/47270
+
+It seems that Blogger Layout has an undocumented requirement that there must be at least two b:section tags on a template in order for b:section and b:widget tags to work.
